@@ -1,0 +1,376 @@
+<project name="Morsescodeübersetzer" app="Snap! 9.0, https://snap.berkeley.edu" version="2">
+    <notes></notes>
+    <thumbnail>
+        data:image/png;base64,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</thumbnail>
+    <scenes select="1">
+        <scene name="Morsescodeübersetzer">
+            <notes></notes>
+            <hidden></hidden>
+            <headers></headers>
+            <code></code>
+            <blocks>
+                <block-definition s="Play Morse %&apos;Morse code&apos;" type="command"
+                    category="sound">
+                    <header></header>
+                    <code></code>
+                    <translations></translations>
+                    <inputs>
+                        <input type="%txt"></input>
+                    </inputs>
+                    <script>
+                        <block s="doFor">
+                            <l>i</l>
+                            <l>1</l>
+                            <block s="reportTextAttribute">
+                                <l>
+                                    <option>length</option>
+                                </l>
+                                <block var="Morse code" />
+                            </block>
+                            <script>
+                                <block s="doIfElse">
+                                    <block s="reportVariadicEquals">
+                                        <list>
+                                            <block s="reportLetter">
+                                                <block var="i" />
+                                                <block var="Morse code" />
+                                            </block>
+                                            <l>.</l>
+                                        </list>
+                                    </block>
+                                    <script>
+                                        <block s="doPlayNote">
+                                            <l>60</l>
+                                            <l>1</l>
+                                        </block>
+                                        <block s="doRest">
+                                            <l>1</l>
+                                        </block>
+                                    </script>
+                                    <script>
+                                        <block s="doIfElse">
+                                            <block s="reportVariadicEquals">
+                                                <list>
+                                                    <block s="reportLetter">
+                                                        <block var="i" />
+                                                        <block var="Morse code" />
+                                                    </block>
+                                                    <l>-</l>
+                                                </list>
+                                            </block>
+                                            <script>
+                                                <block s="doPlayNote">
+                                                    <l>60</l>
+                                                    <l>3</l>
+                                                </block>
+                                                <block s="doRest">
+                                                    <l>1</l>
+                                                </block>
+                                            </script>
+                                            <script>
+                                                <block s="doRest">
+                                                    <l>3</l>
+                                                </block>
+                                            </script>
+                                        </block>
+                                    </script>
+                                </block>
+                            </script>
+                        </block>
+                    </script>
+                </block-definition>
+                <block-definition s="Text %&apos;text&apos; als eine Unicodeliste" type="reporter"
+                    category="operators">
+                    <header></header>
+                    <code></code>
+                    <translations></translations>
+                    <inputs>
+                        <input type="%txt"></input>
+                    </inputs>
+                    <script>
+                        <block s="doDeclareVariables">
+                            <list>
+                                <l>Unicode</l>
+                            </list>
+                        </block>
+                        <block s="doSetVar">
+                            <l>Unicode</l>
+                            <block s="reportNewList">
+                                <list></list>
+                            </block>
+                        </block>
+                        <block s="doFor">
+                            <l>i</l>
+                            <l>1</l>
+                            <block s="reportTextAttribute">
+                                <l>
+                                    <option>length</option>
+                                </l>
+                                <block var="text" />
+                            </block>
+                            <script>
+                                <block s="doAddToList">
+                                    <block s="reportUnicode">
+                                        <block s="reportLetter">
+                                            <block var="i" />
+                                            <block var="text" />
+                                        </block>
+                                    </block>
+                                    <block var="Unicode" />
+                                </block>
+                            </script>
+                        </block>
+                        <block s="doReport">
+                            <block var="Unicode" />
+                        </block>
+                    </script>
+                </block-definition>
+                <block-definition s="Unicode %&apos;Unicode&apos; als Morse" type="reporter"
+                    category="operators">
+                    <header></header>
+                    <code></code>
+                    <translations></translations>
+                    <inputs>
+                        <input type="%n"></input>
+                    </inputs>
+                    <script>
+                        <block s="doDeclareVariables">
+                            <list>
+                                <l>Morse</l>
+                            </list>
+                        </block>
+                        <block s="doDeclareVariables">
+                            <list>
+                                <l>Morse code</l>
+                            </list>
+                        </block>
+                        <block s="doSetVar">
+                            <l>Morse code</l>
+                            <block s="reportNewList">
+                                <list>
+                                    <l>.-</l>
+                                    <l>-...</l>
+                                    <l>-.-.</l>
+                                    <l>-..</l>
+                                    <l>.</l>
+                                    <l>..-.</l>
+                                    <l>---.</l>
+                                    <l>....</l>
+                                    <l>..</l>
+                                    <l>.---</l>
+                                    <l>-.-</l>
+                                    <l>.-..</l>
+                                    <l>--</l>
+                                    <l>-.</l>
+                                    <l>---</l>
+                                    <l>.--.</l>
+                                    <l>--.-</l>
+                                    <l>.-.</l>
+                                    <l>...</l>
+                                    <l>-</l>
+                                    <l>..-</l>
+                                    <l>...-</l>
+                                    <l>.--</l>
+                                    <l>-..-</l>
+                                    <l>-.--</l>
+                                    <l>--..</l>
+                                </list>
+                            </block>
+                        </block>
+                        <block s="doIfElse">
+                            <block s="reportVariadicAnd">
+                                <list>
+                                    <block s="reportVariadicGreaterThan">
+                                        <list>
+                                            <block var="Unicode" />
+                                            <l>64</l>
+                                        </list>
+                                    </block>
+                                    <block s="reportVariadicLessThan">
+                                        <list>
+                                            <block var="Unicode" />
+                                            <l>91</l>
+                                        </list>
+                                    </block>
+                                </list>
+                            </block>
+                            <script>
+                                <block s="doSetVar">
+                                    <l>Morse</l>
+                                    <block s="reportListItem">
+                                        <block s="reportDifference">
+                                            <block var="Unicode" />
+                                            <l>64</l>
+                                        </block>
+                                        <block var="Morse code" />
+                                    </block>
+                                </block>
+                            </script>
+                            <script>
+                                <block s="doIfElse">
+                                    <block s="reportVariadicAnd">
+                                        <list>
+                                            <block s="reportVariadicGreaterThan">
+                                                <list>
+                                                    <block var="Unicode" />
+                                                    <l>95</l>
+                                                </list>
+                                            </block>
+                                            <block s="reportVariadicLessThan">
+                                                <list>
+                                                    <block var="Unicode" />
+                                                    <l>124</l>
+                                                </list>
+                                            </block>
+                                        </list>
+                                    </block>
+                                    <script>
+                                        <block s="doSetVar">
+                                            <l>Morse</l>
+                                            <block s="reportListItem">
+                                                <block s="reportDifference">
+                                                    <block var="Unicode" />
+                                                    <l>96</l>
+                                                </block>
+                                                <block var="Morse code" />
+                                            </block>
+                                        </block>
+                                    </script>
+                                    <script>
+                                        <block s="doSetVar">
+                                            <l>Morse</l>
+                                            <l> </l>
+                                        </block>
+                                    </script>
+                                </block>
+                            </script>
+                        </block>
+                        <block s="doSetVar">
+                            <l>Morse</l>
+                            <block s="reportJoinWords">
+                                <list>
+                                    <block var="Morse" />
+                                    <l> </l>
+                                </list>
+                            </block>
+                        </block>
+                        <block s="doReport">
+                            <block var="Morse" />
+                        </block>
+                    </script>
+                </block-definition>
+            </blocks>
+            <stage name="Stage" width="480" height="360" costume="0" color="255,255,255,1"
+                tempo="500" threadsafe="false" penlog="false" volume="100" pan="0" lines="round"
+                ternary="false" hyperops="true" codify="false" inheritance="true" sublistIDs="false"
+                id="202">
+                <pentrails>
+                    data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeAAAAFoCAYAAACPNyggAAAOhUlEQVR4Xu3VwQkAAAjEMN1/abewn7jAQRC64wgQIECAAIF3gX1fNEiAAAECBAiMAHsCAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQIHLFxAWmhEwHPAAAAAElFTkSuQmCC</pentrails>
+                <costumes>
+                    <list struct="atomic" id="203"></list>
+                </costumes>
+                <sounds>
+                    <list struct="atomic" id="204"></list>
+                </sounds>
+                <variables></variables>
+                <blocks></blocks>
+                <scripts></scripts>
+                <sprites select="1">
+                    <sprite name="Sprite" idx="1" x="0" y="0" heading="90" scale="1" volume="100"
+                        pan="0" rotation="1" draggable="true" costume="0" color="80,80,80,1"
+                        pen="tip" id="209">
+                        <costumes>
+                            <list struct="atomic" id="210"></list>
+                        </costumes>
+                        <sounds>
+                            <list struct="atomic" id="211"></list>
+                        </sounds>
+                        <blocks></blocks>
+                        <variables></variables>
+                        <scripts>
+                            <script x="127" y="67">
+                                <block s="doSetTempo">
+                                    <l>500</l>
+                                </block>
+                            </script>
+                            <script x="132" y="174">
+                                <custom-block s="Text %txt als eine Unicodeliste">
+                                    <l>J</l>
+                                </custom-block>
+                            </script>
+                            <script x="132" y="227.9999999999999">
+                                <custom-block s="Unicode %n als Morse">
+                                    <l>74</l>
+                                </custom-block>
+                            </script>
+                            <script x="329" y="197.00000000000006">
+                                <block s="receiveGo"></block>
+                                <block s="doAsk">
+                                    <l>Was möchten Sie übersetzen?</l>
+                                </block>
+                                <block s="doSetVar">
+                                    <l>string</l>
+                                    <block s="getLastAnswer"></block>
+                                </block>
+                                <block s="doSetVar">
+                                    <l>unicode</l>
+                                    <custom-block s="Text %txt als eine Unicodeliste">
+                                        <block var="string" />
+                                    </custom-block>
+                                </block>
+                                <block s="doSetVar">
+                                    <l>morse</l>
+                                    <l></l>
+                                </block>
+                                <block s="doFor">
+                                    <l>i</l>
+                                    <l>1</l>
+                                    <block s="reportListAttribute">
+                                        <l>
+                                            <option>length</option>
+                                        </l>
+                                        <block var="unicode" />
+                                    </block>
+                                    <script>
+                                        <block s="doSetVar">
+                                            <l>morse</l>
+                                            <block s="reportJoinWords">
+                                                <list>
+                                                    <block var="morse" />
+                                                    <custom-block s="Unicode %n als Morse">
+                                                        <block s="reportListItem">
+                                                            <block var="i" />
+                                                            <block var="unicode" />
+                                                        </block>
+                                                    </custom-block>
+                                                </list>
+                                            </block>
+                                        </block>
+                                    </script>
+                                </block>
+                                <custom-block s="Play Morse %txt">
+                                    <block var="morse" />
+                                </custom-block>
+                            </script>
+                        </scripts>
+                    </sprite>
+                    <watcher var="string" style="normal" x="10" y="10" color="243,118,29" />
+                    <watcher var="unicode" style="normal" x="10" y="31.000001999999995"
+                        color="243,118,29" extX="80" extY="70" />
+                    <watcher var="morse" style="normal" x="10" y="191.000004" color="243,118,29" />
+                </sprites>
+            </stage>
+            <variables>
+                <variable name="string">
+                    <l></l>
+                </variable>
+                <variable name="unicode">
+                    <list struct="atomic" id="264">0,0</list>
+                </variable>
+                <variable name="morse">
+                    <l> </l>
+                </variable>
+            </variables>
+        </scene>
+    </scenes>
+</project>

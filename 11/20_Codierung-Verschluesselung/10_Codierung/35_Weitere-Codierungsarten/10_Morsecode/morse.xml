@@ -1,0 +1,724 @@
+<project name="morse" app="Snap! 9.0, https://snap.berkeley.edu" version="2">
+    <notes></notes>
+    <thumbnail>
+        data:image/png;base64,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</thumbnail>
+    <scenes select="1">
+        <scene name="morse">
+            <notes></notes>
+            <hidden></hidden>
+            <headers></headers>
+            <code></code>
+            <blocks>
+                <block-definition
+                    s="cascade %&apos;num&apos; times %&apos;function&apos; %&apos;init&apos; %&apos;#&apos;"
+                    type="reporter" category="control">
+                    <comment x="0" y="0" w="138" collapsed="false">Call f(f(f(...(f(x))))) n times
+                        where the three input slots are n, f, and x from left to right. The #
+                        variable can be used inside f to represent how many times f has been called.</comment>
+                    <header></header>
+                    <code></code>
+                    <translations></translations>
+                    <inputs>
+                        <input type="%n"></input>
+                        <input type="%repRing"></input>
+                        <input type="%s"></input>
+                        <input type="%upvar"></input>
+                    </inputs>
+                    <script>
+                        <block s="doDeclareVariables">
+                            <list>
+                                <l>result</l>
+                            </list>
+                        </block>
+                        <block s="doSetVar">
+                            <l>result</l>
+                            <block var="init" />
+                        </block>
+                        <block s="doSetVar">
+                            <l>#</l>
+                            <l>0</l>
+                        </block>
+                        <block s="doRepeat">
+                            <block var="num" />
+                            <script>
+                                <block s="doChangeVar">
+                                    <l>#</l>
+                                    <l>1</l>
+                                </block>
+                                <block s="doSetVar">
+                                    <l>result</l>
+                                    <block s="evaluate">
+                                        <block var="function" />
+                                        <list>
+                                            <block var="result" />
+                                        </list>
+                                    </block>
+                                </block>
+                            </script>
+                        </block>
+                        <block s="doReport">
+                            <block var="result" />
+                        </block>
+                    </script>
+                </block-definition>
+                <block-definition
+                    s="cascade until %&apos;pred&apos; %&apos;function&apos; %&apos;init&apos; %&apos;#&apos;"
+                    type="reporter" category="control">
+                    <comment x="0" y="0" w="90" collapsed="false">Call f(f(f(...(f(x))))) until
+                        condition is true, where the three input slots are condition, f, and x from
+                        left to right. The # variable can be used inside f or condition to indicate
+                        how many times f has been called.</comment>
+                    <header></header>
+                    <code></code>
+                    <translations></translations>
+                    <inputs>
+                        <input type="%predRing"></input>
+                        <input type="%repRing"></input>
+                        <input type="%s"></input>
+                        <input type="%upvar"></input>
+                    </inputs>
+                    <script>
+                        <block s="doDeclareVariables">
+                            <list>
+                                <l>result</l>
+                            </list>
+                        </block>
+                        <block s="doSetVar">
+                            <l>result</l>
+                            <block var="init" />
+                        </block>
+                        <block s="doSetVar">
+                            <l>#</l>
+                            <l>0</l>
+                        </block>
+                        <block s="doUntil">
+                            <block s="evaluate">
+                                <block var="pred" />
+                                <list>
+                                    <block var="result" />
+                                </list>
+                            </block>
+                            <script>
+                                <block s="doChangeVar">
+                                    <l>#</l>
+                                    <l>1</l>
+                                </block>
+                                <block s="doSetVar">
+                                    <l>result</l>
+                                    <block s="evaluate">
+                                        <block var="function" />
+                                        <list>
+                                            <block var="result" />
+                                        </list>
+                                    </block>
+                                </block>
+                            </script>
+                        </block>
+                        <block s="doReport">
+                            <block var="result" />
+                        </block>
+                    </script>
+                </block-definition>
+                <block-definition s="compose %&apos;f&apos; %&apos;g&apos;" type="reporter"
+                    category="control">
+                    <comment x="0" y="0" w="90" collapsed="false">Returns the function f(g(x)) where
+                        f and g are the two inputs.</comment>
+                    <header></header>
+                    <code></code>
+                    <translations></translations>
+                    <inputs>
+                        <input type="%repRing"></input>
+                        <input type="%repRing"></input>
+                    </inputs>
+                    <script>
+                        <block s="doReport">
+                            <block s="reifyReporter">
+                                <autolambda>
+                                    <block s="evaluate">
+                                        <block var="f" />
+                                        <list>
+                                            <block s="evaluate">
+                                                <block var="g" />
+                                                <list>
+                                                    <l></l>
+                                                </list>
+                                            </block>
+                                        </list>
+                                    </block>
+                                </autolambda>
+                                <list></list>
+                            </block>
+                        </block>
+                    </script>
+                </block-definition>
+                <block-definition s="repeat %&apos;action&apos; until %&apos;pred&apos;"
+                    type="command" category="control">
+                    <comment x="0" y="0" w="90" collapsed="false">Like the built-in REPEAT UNTIL
+                        block, except that the ending condition is not tested until the script has
+                        been run the first time. So the script is run at least once.</comment>
+                    <header></header>
+                    <code></code>
+                    <translations></translations>
+                    <inputs>
+                        <input type="%cs"></input>
+                        <input type="%boolUE"></input>
+                    </inputs>
+                    <script>
+                        <block s="doRun">
+                            <block var="action" />
+                            <list></list>
+                        </block>
+                        <block s="doUntil">
+                            <block s="evaluate">
+                                <block var="pred" />
+                                <list></list>
+                            </block>
+                            <script>
+                                <block s="doRun">
+                                    <block var="action" />
+                                    <list></list>
+                                </block>
+                            </script>
+                        </block>
+                    </script>
+                </block-definition>
+                <block-definition s="repeat %&apos;action&apos; while %&apos;pred&apos;"
+                    type="command" category="control">
+                    <comment x="0" y="0" w="90" collapsed="false">Run the script repeatedly, as long
+                        as the given condition is true. Runs the script at least once before testing
+                        the condition.</comment>
+                    <header></header>
+                    <code></code>
+                    <translations></translations>
+                    <inputs>
+                        <input type="%cs"></input>
+                        <input type="%boolUE"></input>
+                    </inputs>
+                    <script>
+                        <block s="doRun">
+                            <block var="action" />
+                            <list></list>
+                        </block>
+                        <block s="doUntil">
+                            <block s="reportNot">
+                                <block s="evaluate">
+                                    <block var="pred" />
+                                    <list></list>
+                                </block>
+                            </block>
+                            <script>
+                                <block s="doRun">
+                                    <block var="action" />
+                                    <list></list>
+                                </block>
+                            </script>
+                        </block>
+                    </script>
+                </block-definition>
+                <block-definition s="repeat while %&apos;pred&apos; %&apos;action&apos;"
+                    type="command" category="control">
+                    <comment x="0" y="0" w="90" collapsed="false">Runs the script repeatedly, as
+                        long as the condition is true. Tests the condition before the first time the
+                        script is run. Like the built in REPEAT UNTIL except that in this block the
+                        condition must be true, not false.</comment>
+                    <header></header>
+                    <code></code>
+                    <translations></translations>
+                    <inputs>
+                        <input type="%boolUE"></input>
+                        <input type="%cs"></input>
+                    </inputs>
+                    <script>
+                        <block s="doUntil">
+                            <block s="reportNot">
+                                <block s="evaluate">
+                                    <block var="pred" />
+                                    <list></list>
+                                </block>
+                            </block>
+                            <script>
+                                <block s="doRun">
+                                    <block var="action" />
+                                    <list></list>
+                                </block>
+                            </script>
+                        </block>
+                    </script>
+                </block-definition>
+                <block-definition s="repeat %&apos;num&apos; %&apos;#&apos; %&apos;action&apos;"
+                    type="command" category="control">
+                    <comment x="0" y="0" w="171" collapsed="false">Runs the script the specified
+                        number of times, like the built-in REPEAT block, but this one provides the #
+                        variable that can be used inside the script. Try&#xD;REPEAT (200)&#xD; MOVE
+                        (#) STEPS&#xD; RIGHT 92&#xD;with the pen down.</comment>
+                    <header></header>
+                    <code></code>
+                    <translations></translations>
+                    <inputs>
+                        <input type="%n"></input>
+                        <input type="%upvar"></input>
+                        <input type="%cs"></input>
+                    </inputs>
+                    <script>
+                        <block s="doSetVar">
+                            <l>#</l>
+                            <l>0</l>
+                        </block>
+                        <block s="doRepeat">
+                            <block var="num" />
+                            <script>
+                                <block s="doChangeVar">
+                                    <l>#</l>
+                                    <l>1</l>
+                                </block>
+                                <block s="doRun">
+                                    <block var="action" />
+                                    <list></list>
+                                </block>
+                            </script>
+                        </block>
+                    </script>
+                </block-definition>
+                <block-definition
+                    s="for %&apos;i&apos; = %&apos;start&apos; step %&apos;step&apos; to %&apos;end&apos; %&apos;action&apos;"
+                    type="command" category="control">
+                    <header></header>
+                    <code></code>
+                    <translations></translations>
+                    <inputs>
+                        <input type="%upvar"></input>
+                        <input type="%n">1</input>
+                        <input type="%n">1</input>
+                        <input type="%n">10</input>
+                        <input type="%cs"></input>
+                    </inputs>
+                    <script>
+                        <block s="doDeclareVariables">
+                            <list>
+                                <l>test</l>
+                            </list>
+                        </block>
+                        <block s="doSetVar">
+                            <l>i</l>
+                            <block var="start" />
+                        </block>
+                        <block s="doIfElse">
+                            <block s="reportVariadicLessThan">
+                                <list>
+                                    <block var="step" />
+                                    <l>0</l>
+                                </list>
+                            </block>
+                            <script>
+                                <block s="doSetVar">
+                                    <l>test</l>
+                                    <block s="reifyPredicate">
+                                        <autolambda>
+                                            <block s="reportVariadicLessThan">
+                                                <list>
+                                                    <block var="i" />
+                                                    <block var="end" />
+                                                </list>
+                                            </block>
+                                        </autolambda>
+                                        <list></list>
+                                    </block>
+                                </block>
+                            </script>
+                            <script>
+                                <block s="doSetVar">
+                                    <l>test</l>
+                                    <block s="reifyPredicate">
+                                        <autolambda>
+                                            <block s="reportVariadicGreaterThan">
+                                                <list>
+                                                    <block var="i" />
+                                                    <block var="end" />
+                                                </list>
+                                            </block>
+                                        </autolambda>
+                                        <list></list>
+                                    </block>
+                                </block>
+                            </script>
+                        </block>
+                        <block s="doUntil">
+                            <block s="evaluate">
+                                <block var="test" />
+                                <list></list>
+                            </block>
+                            <script>
+                                <block s="doRun">
+                                    <block var="action" />
+                                    <list></list>
+                                </block>
+                                <block s="doChangeVar">
+                                    <l>i</l>
+                                    <block var="step" />
+                                </block>
+                            </script>
+                        </block>
+                    </script>
+                </block-definition>
+                <block-definition s="play %&apos;morse&apos;" type="command" category="sound">
+                    <header></header>
+                    <code></code>
+                    <translations></translations>
+                    <inputs>
+                        <input type="%txt"></input>
+                    </inputs>
+                    <script>
+                        <custom-block s="for %upvar = %n step %n to %n %cs">
+                            <l>i</l>
+                            <l>1</l>
+                            <l>1</l>
+                            <block s="reportTextAttribute">
+                                <l>
+                                    <option>length</option>
+                                </l>
+                                <block var="morse" />
+                            </block>
+                            <script>
+                                <block s="doIfElse">
+                                    <block s="reportVariadicEquals">
+                                        <list>
+                                            <block s="reportLetter">
+                                                <block var="i" />
+                                                <block var="morse" />
+                                            </block>
+                                            <l>.</l>
+                                        </list>
+                                    </block>
+                                    <script>
+                                        <block s="doPlayNote">
+                                            <l>60</l>
+                                            <l>1</l>
+                                        </block>
+                                        <block s="doRest">
+                                            <l>1</l>
+                                        </block>
+                                    </script>
+                                    <script>
+                                        <block s="doIfElse">
+                                            <block s="reportVariadicEquals">
+                                                <list>
+                                                    <block s="reportLetter">
+                                                        <block var="i" />
+                                                        <block var="morse" />
+                                                    </block>
+                                                    <l>-</l>
+                                                </list>
+                                            </block>
+                                            <script>
+                                                <block s="doPlayNote">
+                                                    <l>60</l>
+                                                    <l>3</l>
+                                                </block>
+                                                <block s="doRest">
+                                                    <l>1</l>
+                                                </block>
+                                            </script>
+                                            <script>
+                                                <block s="doRest">
+                                                    <l>3</l>
+                                                </block>
+                                            </script>
+                                        </block>
+                                    </script>
+                                </block>
+                            </script>
+                        </custom-block>
+                        <block s="doStopThis">
+                            <l>
+                                <option>this block</option>
+                            </l>
+                        </block>
+                    </script>
+                </block-definition>
+                <block-definition s="text %&apos;text&apos; as unicode list" type="reporter"
+                    category="operators">
+                    <header></header>
+                    <code></code>
+                    <translations></translations>
+                    <inputs>
+                        <input type="%txt"></input>
+                    </inputs>
+                    <script>
+                        <block s="doDeclareVariables">
+                            <list>
+                                <l>a</l>
+                            </list>
+                        </block>
+                        <block s="doSetVar">
+                            <l>a</l>
+                            <block s="reportNewList">
+                                <list></list>
+                            </block>
+                        </block>
+                        <custom-block s="for %upvar = %n step %n to %n %cs">
+                            <l>i</l>
+                            <l>1</l>
+                            <l>1</l>
+                            <block s="reportTextAttribute">
+                                <l>
+                                    <option>length</option>
+                                </l>
+                                <block var="text" />
+                            </block>
+                            <script>
+                                <block s="doAddToList">
+                                    <block s="reportUnicode">
+                                        <block s="reportLetter">
+                                            <block var="i" />
+                                            <block var="text" />
+                                        </block>
+                                    </block>
+                                    <block var="a" />
+                                </block>
+                            </script>
+                        </custom-block>
+                        <block s="doReport">
+                            <block var="a" />
+                        </block>
+                    </script>
+                </block-definition>
+                <block-definition s="unicode to morse" type="reporter" category="other">
+                    <header></header>
+                    <code></code>
+                    <translations></translations>
+                    <inputs></inputs>
+                    <script>
+                        <block s="doReport">
+                            <l></l>
+                        </block>
+                    </script>
+                </block-definition>
+                <block-definition s="unicode %&apos;unicode&apos; to morse" type="reporter"
+                    category="operators">
+                    <header></header>
+                    <code></code>
+                    <translations></translations>
+                    <inputs>
+                        <input type="%n"></input>
+                    </inputs>
+                    <script>
+                        <block s="doDeclareVariables">
+                            <list>
+                                <l>morse</l>
+                            </list>
+                        </block>
+                        <block s="doDeclareVariables">
+                            <list>
+                                <l>code</l>
+                            </list>
+                        </block>
+                        <block s="doSetVar">
+                            <l>morse</l>
+                            <block s="reportNewList">
+                                <list>
+                                    <l>.-</l>
+                                    <l>-...</l>
+                                    <l>-.-.</l>
+                                    <l>-..</l>
+                                    <l>.</l>
+                                    <l>..-.</l>
+                                    <l>--.</l>
+                                    <l>....</l>
+                                    <l>..</l>
+                                    <l>.---</l>
+                                    <l>.-</l>
+                                    <l>.-..</l>
+                                    <l>--</l>
+                                    <l>-.</l>
+                                    <l>---</l>
+                                    <l>.--.</l>
+                                    <l>--.-</l>
+                                    <l>.-.</l>
+                                    <l>...</l>
+                                    <l>-</l>
+                                    <l>..-</l>
+                                    <l>...-</l>
+                                    <l>.--</l>
+                                    <l>-..-</l>
+                                    <l>-.--</l>
+                                    <l>--..</l>
+                                </list>
+                            </block>
+                        </block>
+                        <block s="doIfElse">
+                            <block s="reportVariadicAnd">
+                                <list>
+                                    <block s="reportVariadicGreaterThan">
+                                        <list>
+                                            <block var="unicode" />
+                                            <l>64</l>
+                                        </list>
+                                    </block>
+                                    <block s="reportVariadicLessThan">
+                                        <list>
+                                            <block var="unicode" />
+                                            <l>91</l>
+                                        </list>
+                                    </block>
+                                </list>
+                            </block>
+                            <script>
+                                <block s="doSetVar">
+                                    <l>code</l>
+                                    <block s="reportListItem">
+                                        <block s="reportDifference">
+                                            <block var="unicode" />
+                                            <l>64</l>
+                                        </block>
+                                        <block var="morse" />
+                                    </block>
+                                </block>
+                            </script>
+                            <script>
+                                <block s="doIfElse">
+                                    <block s="reportVariadicAnd">
+                                        <list>
+                                            <block s="reportVariadicGreaterThan">
+                                                <list>
+                                                    <block var="unicode" />
+                                                    <l>96</l>
+                                                </list>
+                                            </block>
+                                            <block s="reportVariadicLessThan">
+                                                <list>
+                                                    <block var="unicode" />
+                                                    <l>123</l>
+                                                </list>
+                                            </block>
+                                        </list>
+                                    </block>
+                                    <script>
+                                        <block s="doSetVar">
+                                            <l>code</l>
+                                            <block s="reportListItem">
+                                                <block s="reportDifference">
+                                                    <block var="unicode" />
+                                                    <l>96</l>
+                                                </block>
+                                                <block var="morse" />
+                                            </block>
+                                        </block>
+                                    </script>
+                                    <script>
+                                        <block s="doSetVar">
+                                            <l>code</l>
+                                            <l> </l>
+                                        </block>
+                                    </script>
+                                </block>
+                            </script>
+                        </block>
+                        <block s="doReport">
+                            <block s="reportJoinWords">
+                                <list>
+                                    <block var="code" />
+                                    <l> </l>
+                                </list>
+                            </block>
+                        </block>
+                    </script>
+                </block-definition>
+            </blocks>
+            <stage name="Stage" width="480" height="360" costume="0" color="255,255,255,1"
+                tempo="500" threadsafe="false" penlog="false" volume="100" pan="0" lines="round"
+                ternary="true" hyperops="true" codify="false" inheritance="true" sublistIDs="false"
+                id="420">
+                <pentrails>
+                    data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeAAAAFoCAYAAACPNyggAAAAAXNSR0IArs4c6QAADoVJREFUeF7t1cEJAAAIxDDdf2m3sJ+4wEEQuuMIECBAgACBd4F9XzRIgAABAgQIjAB7AgIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECByxcQFpoRMBzwAAAABJRU5ErkJggg==</pentrails>
+                <costumes>
+                    <list struct="atomic" id="421"></list>
+                </costumes>
+                <sounds>
+                    <list struct="atomic" id="422"></list>
+                </sounds>
+                <variables></variables>
+                <blocks></blocks>
+                <scripts></scripts>
+                <sprites select="1">
+                    <sprite name="-" idx="1" x="0" y="0" heading="90" scale="1" volume="100" pan="0"
+                        rotation="1" draggable="true" costume="0" color="80,80,80,1" pen="tip"
+                        id="427">
+                        <costumes>
+                            <list struct="atomic" id="428"></list>
+                        </costumes>
+                        <sounds>
+                            <list struct="atomic" id="429"></list>
+                        </sounds>
+                        <blocks></blocks>
+                        <variables></variables>
+                        <scripts>
+                            <script x="21.27777777777777" y="51.30555555555554">
+                                <block s="receiveGo"></block>
+                                <block s="doSetTempo">
+                                    <l>500</l>
+                                </block>
+                                <block s="doAsk">
+                                    <l>What would you like to transmit?</l>
+                                </block>
+                                <block s="doSetVar">
+                                    <l>unicodelist</l>
+                                    <custom-block s="text %txt as unicode list">
+                                        <block s="getLastAnswer"></block>
+                                    </custom-block>
+                                </block>
+                                <block s="doSetVar">
+                                    <l>morsecode</l>
+                                    <l></l>
+                                </block>
+                                <custom-block s="for %upvar = %n step %n to %n %cs">
+                                    <l>i</l>
+                                    <l>1</l>
+                                    <l>1</l>
+                                    <block s="reportListAttribute">
+                                        <l>
+                                            <option>length</option>
+                                        </l>
+                                        <block var="unicodelist" />
+                                    </block>
+                                    <script>
+                                        <block s="doSetVar">
+                                            <l>morsecode</l>
+                                            <block s="reportJoinWords">
+                                                <list>
+                                                    <block var="morsecode" />
+                                                    <custom-block s="unicode %n to morse">
+                                                        <block s="reportListItem">
+                                                            <block var="i" />
+                                                            <block var="unicodelist" />
+                                                        </block>
+                                                    </custom-block>
+                                                </list>
+                                            </block>
+                                        </block>
+                                    </script>
+                                </custom-block>
+                                <custom-block s="play %txt">
+                                    <block var="morsecode" />
+                                </custom-block>
+                            </script>
+                            <comment x="490" y="28" w="111" collapsed="false">1 Convert morse to
+                                tones&#xD;2 Convert text to ASCII&#xD;3 Convert ASCII to Morse&#xD;4
+                                Combine these.</comment>
+                        </scripts>
+                    </sprite>
+                    <watcher var="unicodelist" style="normal" x="10" y="10" color="243,118,29"
+                        extX="80" extY="70" />
+                    <watcher var="morsecode" style="normal" x="10" y="181.000002" color="243,118,29" />
+                </sprites>
+            </stage>
+            <variables>
+                <variable name="unicodelist">
+                    <list struct="atomic" id="475">105,110,102,111,114,109,97,116,105,107</list>
+                </variable>
+                <variable name="morsecode">
+                    <l>.. -. ..-. --- .-. -- .- - .. .- </l>
+                </variable>
+            </variables>
+        </scene>
+    </scenes>
+</project>
